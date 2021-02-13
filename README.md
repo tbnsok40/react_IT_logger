@@ -36,4 +36,11 @@ useState : 상태의 기본값을 파라미터로 넣어 호출
 
 
 > label 태그의  htmlFor = "" 
-> // htmlFor 비어있으면 아예 선언을 하지 말 것. 
+> // htmlFor 비어있으면 아예 선언을 하지 말 것.
+
+
+redux is for large application, context is for small or intermediate
+
+
+> starting Redux
+- npm i redux react-redux redux-thunk redux-devtools-extension
