@@ -20,13 +20,6 @@
             "tech": "Sara Wilson",
             "date": "2019-05-31T15:46:48.690Z",
             "id": 3
-        },
-        {
-            "message": "1132 down down down down",
-            "attention": true,
-            "tech": "Lim Kim",
-            "date": "2019-05-31T15:46:48.690Z",
-            "id": 4
         }
     ],
     "techs": [
@@ -44,11 +37,6 @@
             "id": 3,
             "firstName": "Sara",
             "lastName": "Wilson"
-        },
-        {
-            "id": 4,
-            "firstName": "Lim",
-            "lastName": "Kim"
         }
     ]
 }
