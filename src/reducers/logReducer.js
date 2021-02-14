@@ -6,7 +6,8 @@ import {
     DELETE_LOG,
     SET_CURRENT,
     CLEAR_CURRENT,
-    UPDATE_LOG
+    UPDATE_LOG,
+    SEARCH_LOGS,
 } from '../actions/types';
 
 const initialState = {
@@ -44,10 +45,10 @@ export default (state = initialState, action) => { // eslint-disable-next-line
                 loading: false
             };
 
-            case UPDATE_LOG:
+        case UPDATE_LOG:
             return {
                 ...state,
-                logs: state.logs.map(log => log.id === action.payload.id ? action.payload :log)
+                logs: state.logs.map(log => log.id === action.payload.id ? action.payload : log)
                 // action.payload는 삭제될 log의 id를 나타내므로,
                 // 이와 다른 id값을 가진(조건문의 true) 로그는 logs 배열로 리턴된다.
             };
@@ -67,6 +68,12 @@ export default (state = initialState, action) => { // eslint-disable-next-line
             return {
                 ...state,
                 current: null,
+            };
+
+        case SEARCH_LOGS:
+            return {
+                ...state,
+                logs: action.payload,
             };
         default:
             return state;
