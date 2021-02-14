@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import LogItem from "./LogItem";
-import Preloader from   '../layout/Preloader'
+import Preloader from '../layout/Preloader'
 import {connect} from 'react-redux'; // 1. just bring the connect
 import PropTypes from 'prop-types';
 import {getLogs} from '../../actions/logActions'
@@ -14,6 +14,7 @@ const Logs = ({log: {logs, loading}, getLogs}) => {
         // 원래는 아래의 코드로 정의했다면, 리듀서에서는 logActions 에서 불러온다(as props)
     }, []);
 
+    // 여긴 주석처리하는데, 따로 action에서 정의했기 때문.
     // 비동기 함수로 들어간다. await가 당연히 필요하다
     // const getLogs = async () => {
     //     setLoading(true);
@@ -24,7 +25,7 @@ const Logs = ({log: {logs, loading}, getLogs}) => {
     // } // we gonna coll it from action now
 
     if (loading || logs === null) {
-        return <Preloader />
+        return <Preloader/>
     }
     return (
         <ul className="collection with-header">
@@ -32,7 +33,7 @@ const Logs = ({log: {logs, loading}, getLogs}) => {
                 <h4 className="center">System Logs</h4>
             </li>
             {!loading && logs.length === 0 ? (<p className="center"> No logs to show...</p>) :
-                (logs.map(log => <LogItem log = {log} key = {log.id} />))
+                (logs.map(log => <LogItem log={log} key={log.id}/>))
             }
         </ul>
     )
@@ -40,18 +41,19 @@ const Logs = ({log: {logs, loading}, getLogs}) => {
 
 
 Logs.propTypes = {
-    log: PropTypes.object.isRequired
+    log: PropTypes.object.isRequired,
+    getLogs: PropTypes.func.isRequired
 }
 
 // export default Logs;
 
 // 3. anything i want to bring as state, put it in mapStateToProps
 const mapStateToProps = state => ({
-    // this log is prop
+    // this first log is prop
     log: state.log // this is from rootreducer (index.js)
 })
 
 
 // 2. export the connect down here
-export default connect(mapStateToProps, {getLogs}) (Logs);
+export default connect(mapStateToProps, {getLogs})(Logs);
 // 4. bring action too

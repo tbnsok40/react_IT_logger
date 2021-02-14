@@ -15,7 +15,7 @@ import React, {useEffect, Fragment} from 'react';
 const App = () => {
     useEffect(() => {
         M.AutoInit();
-    })
+    });
 
     return (
         <Provider store ={store}>
@@ -32,6 +32,6 @@ const App = () => {
             </Fragment>
         </Provider>
     );
-}
+};
 
 export default App;
