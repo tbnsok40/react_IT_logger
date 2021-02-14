@@ -39,6 +39,7 @@ export default (state = initialState, action) => { // eslint-disable-next-line
         case DELETE_LOG:
             return {
                 ...state,
+                // 리스트 delete 이런 방법이 있네
                 logs: state.logs.filter(log => log.id !== action.payload),
                 // action.payload는 삭제될 log의 id를 나타내므로,
                 // 이와 다른 id값을 가진(조건문의 true) 로그는 logs 배열로 리턴된다.

@@ -47,7 +47,7 @@ export const getLogs = () => async dispatch => {
 export const searchLogs = (text) => async dispatch => {
     try {
         setLoading();
-        const res = await fetch(`/logs?q = ${text}`);
+        const res = await fetch(`/logs?q=${text}`);
         const data = await res.json();
 
         dispatch({
