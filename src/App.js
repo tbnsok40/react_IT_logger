@@ -18,7 +18,7 @@ const App = () => {
     })
 
     return (
-        <Provider>
+        <Provider store ={store}>
             <Fragment>
                 <SearchBar/>
                 <div className="container">
