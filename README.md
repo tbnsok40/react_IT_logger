@@ -1,9 +1,9 @@
 
->설치
+> ### 설치
 - npx create-react-app .
 - npm i -D json-server concurrently
 
->package.json
+> ### package.json
 - 추가
 ```
 scripts{
@@ -18,7 +18,7 @@ scripts{
   // proxy 서버 생성
 ```
 
-> 실행
+> ### 실행
 - `npm run dev`
 
 
