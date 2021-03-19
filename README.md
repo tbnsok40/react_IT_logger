@@ -19,7 +19,7 @@ scripts{
 ```
 
 > 실행
-- `npm run dev
+- `npm run dev`
 
 
 til
