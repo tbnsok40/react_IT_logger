@@ -18,6 +18,10 @@ scripts{
   // proxy 서버 생성
 ```
 
+> 실행
+- `npm run dev
+
+
 til
 ```
 {!loading && logs.length === 0  // loading이 true이면서 
