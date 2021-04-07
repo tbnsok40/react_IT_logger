@@ -29,19 +29,14 @@
       "lastName": "Doe"
     },
     {
-      "id": 2,
-      "firstName": "Sam",
-      "lastName": "Smith"
-    },
-    {
-      "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
-    },
-    {
       "firstName": "SUNGHOO",
       "lastName": "LIM",
       "id": 4
+    },
+    {
+      "firstName": "내가 ",
+      "lastName": "그걸 모를까?",
+      "id": 7
     }
   ]
 }
