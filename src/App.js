@@ -11,6 +11,7 @@ import TechListModal from "./components/techs/TechListModal";
 import {Provider} from 'react-redux';
 import store from './store';
 import React, {useEffect, Fragment} from 'react';
+;
 
 const App = () => {
     useEffect(() => {
@@ -18,7 +19,7 @@ const App = () => {
     });
 
     return (
-        <Provider store ={store}>
+        <Provider store={store}>
             <Fragment>
                 <SearchBar/>
                 <div className="container">

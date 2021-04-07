@@ -8,9 +8,12 @@
     "@testing-library/user-event": "^12.1.10",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "luna-rocket": "git+http://git.duzon.com/ui/npm-luna-rocket.git",
     "materialize-css": "^1.0.0",
     "moment": "^2.29.1",
+    "prop-types": "15.7.2",
     "react": "^17.0.1",
+    "react-async": "^10.0.1",
     "react-dom": "^17.0.1",
     "react-moment": "^1.1.1",
     "react-redux": "^7.2.2",
@@ -18,10 +21,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "web-vitals": "^1.0.1",
-    "prop-types": "15.7.2"
-
-
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
