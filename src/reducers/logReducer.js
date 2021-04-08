@@ -25,7 +25,6 @@ export default (state = initialState, action) => { // eslint-disable-next-line
                 loading: false
             };
         case ADD_LOG:
-            console.log(action.payload, '123');
             return {
                 ...state,
                 logs: [...state.logs, action.payload],

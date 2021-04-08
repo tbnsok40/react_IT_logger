@@ -9,7 +9,8 @@ import {
     UPDATE_LOG,
     SEARCH_LOGS
 } from './types';
-
+// dispatch is a built-in func in store
+// dispatch func sends 'action' as parameter
 export const getLogs = () =>{
     return async (dispatch) => {
         setLoading();

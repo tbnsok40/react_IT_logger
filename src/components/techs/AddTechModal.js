@@ -22,7 +22,7 @@ const AddTechModal = ({addTechs}) => {
 
             // clear fields
             setFirstName('');
-            setLastName('')
+            setLastName('');
         }
     }
 
@@ -61,4 +61,4 @@ const AddTechModal = ({addTechs}) => {
 AddTechModal.propTypes = {
     addTechs: PropTypes.func.isRequired,
 }
-export default connect(null, { addTechs }) (AddTechModal);
+export default connect(null, {addTechs})(AddTechModal);

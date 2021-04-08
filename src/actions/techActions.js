@@ -1,8 +1,8 @@
-import {GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR, GET_LOGS} from "./types";
+import {GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR} from "./types";
 // import {setLoading} from "./logActions";
 
 //GET techs from server
-export const getTechs = () =>{
+export const getTechs = () => {
     return async (dispatch) => {
         setLoading();
 
@@ -10,14 +10,14 @@ export const getTechs = () =>{
         const data = await res.json();
 
         dispatch({
-            type:GET_TECHS,
+            type: GET_TECHS,
             payload: data
         });
     };
 };
 
 //Add techs from server
-export const addTechs = (tech) =>{
+export const addTechs = (tech) => {
     return async (dispatch) => {
         setLoading();
 
@@ -31,11 +31,22 @@ export const addTechs = (tech) =>{
         const data = await res.json();
 
         dispatch({
-            type:ADD_TECH,
+            type: ADD_TECH,
             payload: data
         });
     };
 };
+
+export const deleteTechs = (id) => async dispatch => {
+    setLoading();
+    await fetch(`/techs/${id}`, {
+        method: 'DELETE',
+    });
+    dispatch({
+        type: DELETE_TECH,
+        payload: id
+    })
+}
 
 
 // set loading to True
