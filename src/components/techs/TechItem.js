@@ -14,7 +14,11 @@ const TechItem = ({tech: {id, firstName, lastName}, deleteTechs}) => {
     return (
         <li className="collection-item">
             {firstName} {lastName}
+<<<<<<< HEAD
             <a href="!#" className="secondary-content" onClick={onDelete}>
+=======
+            <a href="" className="secondary-content" onClick={onDelete}>
+>>>>>>> f837053214e2c6873dd2f1c3d6fccd7643a6a0b9
                 <i className="material-icons grey-text">delete</i>
             </a>
         </li>
