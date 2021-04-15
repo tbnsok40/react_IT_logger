@@ -5,21 +5,7 @@
       "message": "Fixed hard drive on workstation 001",
       "attention": true,
       "tech": "John Doe",
-      "date": "2021-02-14T12:44:27.328Z",
-      "nested": [
-        {
-          "id": 10,
-          "message": "nested structure"
-        },
-        {
-          "id": 11,
-          "message": "nested structure2"
-        },
-        {
-          "id": 12,
-          "message": "nested structure3"
-        }
-      ]
+      "date": "2021-02-14T12:44:27.328Z"
     },
     {
       "message": "Junior something 222",

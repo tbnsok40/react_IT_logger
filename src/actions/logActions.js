@@ -11,41 +11,41 @@ import {
 } from './types';
 // dispatch is a built-in func in store
 // dispatch func sends 'action' as parameter
-export const getLogs = () =>{
-    return async (dispatch) => {
-        setLoading();
-
-        const res = await fetch('/logs');
-        const data = await res.json();
-
-        dispatch({
-            type:GET_LOGS,
-            payload: data
-        });
-    };
-};
-
-
-
-
-// Get logs from server, 비동기로 처리해야한다.
-// export const getLogs = () => async dispatch => {
-//     try {
+// export const getLogs = () =>{
+//     return async (dispatch) => {
 //         setLoading();
+//
 //         const res = await fetch('/logs');
 //         const data = await res.json();
 //
 //         dispatch({
-//             type: GET_LOGS, // 2) 데이터를 할당받는다.
-//             payload: data // 1) 분기 역할을 해주고,
+//             type:GET_LOGS,
+//             payload: data
 //         });
-//     } catch (err) {
-//         dispatch({
-//             type: LOGS_ERROR,
-//             payload: err.response.data
-//         })
-//     }
+//     };
 // };
+//
+
+
+
+// Get logs from server, 비동기로 처리해야한다.
+export const getLogs = () => async dispatch => {
+    try {
+        setLoading();
+        const res = await fetch('/logs');
+        const data = await res.json();
+
+        dispatch({
+            type: GET_LOGS, // 2) 데이터를 할당받는다.
+            payload: data // 1) 분기 역할을 해주고,
+        });
+    } catch (err) {
+        dispatch({
+            type: LOGS_ERROR,
+            payload: err.response.data
+        })
+    }
+};
 
 // search
 export const searchLogs = (text) => async dispatch => {

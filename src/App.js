@@ -11,7 +11,7 @@ import TechListModal from "./components/techs/TechListModal";
 import {Provider} from 'react-redux';
 import store from './store';
 import React, {useEffect, Fragment} from 'react';
-;
+
 
 const App = () => {
     useEffect(() => {
